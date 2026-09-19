@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #030712;
+  color: #f9fafb;
+}
+
+/* y-monaco remote cursor labels */
+.yRemoteSelectionHead {
+  position: absolute;
+  border-left: 2px solid;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.yRemoteSelectionHead::after {
+  position: absolute;
+  content: attr(data-name);
+  font-size: 11px;
+  font-family: sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  padding: 1px 5px;
+  border-radius: 3px;
+  top: -20px;
+  left: -2px;
+  white-space: nowrap;
+  pointer-events: none;
+}
